@@ -1,0 +1,48 @@
+
+/* Footer Styles */
+.footer {
+  background-color: var(--light-bg); /* Dark background for contrast */
+  color: var(--text-light); /* White text for readability */
+  padding: 30px;
+  text-align: center;
+  font-size: 1rem;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer .credit {
+  margin: 0;
+  padding: 0;
+}
+
+.footer .credit p {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.footer .creator-name {
+  font-weight: bold;
+  color: var; /* Gold color to make the creator's names stand out */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer .creator-name:hover {
+  color: var(--primary-color); /* Orange hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+      font-size: 0.8rem;
+  }
+}
