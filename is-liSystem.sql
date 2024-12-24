@@ -51,6 +51,18 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+CREATE TABLE eligibility_requests (
+	id INT(10) NOT NULL AUTO_INCREMENT,
+	student_name VARCHAR(255) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	ndp VARCHAR(50) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	reason TEXT NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	status ENUM('Pending','Approved','Rejected') NOT NULL DEFAULT 'Pending' COLLATE 'utf8mb4_0900_ai_ci',
+	PRIMARY KEY (id) USING BTREE
+)
+COLLATE='utf8mb4_0900_ai_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=17
+;
 -- Data exporting was unselected.
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
